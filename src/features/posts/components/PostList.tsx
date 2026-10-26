@@ -11,7 +11,7 @@ const PostList = () => {
         <p role="status" className="sr-only">
           Loading posts
         </p>
-        <div aria-hidden>
+        <div aria-hidden className="flex flex-col gap-3">
           {[1, 2, 3, 4, 5].map((index) => (
             <PostRowSkeleton key={index} />
           ))}
@@ -42,7 +42,7 @@ const PostList = () => {
     );
 
   return (
-    <div className="mt-10">
+    <div className="mt-10 flex flex-col gap-3">
       {data.map((post) => (
         <PostRow post={post} key={post.id} />
       ))}

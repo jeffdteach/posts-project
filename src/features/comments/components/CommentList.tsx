@@ -16,13 +16,13 @@ const CommentList = ({ postId }: { postId: Comment["postId"] }) => {
       <div className="min-w-0">
         <h2 className="text-sm font-medium tracking-tight">Comments</h2>
 
-        <div className="mt-6">
+        <div className="mt-6 flex flex-col gap-3">
           {isPending && (
             <>
               <p role="status" className="sr-only">
                 Loading comments
               </p>
-              <div aria-hidden>
+              <div aria-hidden className="flex flex-col gap-3">
                 {[1, 2, 3].map((index) => (
                   <CommentItemSkeleton key={index} />
                 ))}
